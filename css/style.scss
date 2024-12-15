@@ -1,0 +1,602 @@
+@charset "UTF-8";
+@use "parts/basic";
+@use 'parts/mixin' as b;
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Island Moments";
+
+    @include b.tab {
+        flex-direction: column
+    }
+
+    a {
+        font-size: 60px;
+        font-weight: lighter;
+    }
+
+    .menu-right {
+        width: 100%;
+        overflow-x: auto;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                padding-inline: 2%;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    font-size: 40px;
+
+                    @include b.tab {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            img {
+                &.insta-icon {
+                    width: 15px;
+                    margin-top: 5px;
+                    margin-inline: 5px;
+
+                }
+            }
+        }
+    }
+}
+
+
+
+main {
+
+    #mainvisual {
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+        margin-bottom: 250px;
+
+        img {
+            width: 100%;
+        }
+
+        @include b.tab {
+            width: 100%;
+            margin-bottom: 150px;
+        }
+    }
+
+    #about {
+        margin-bottom: 300px;
+        position: relative;
+
+        @include b.tab {
+            margin-bottom: 200px;
+        }
+
+        .about-contents {
+            padding: 30px 30px;
+            margin: 0 auto;
+
+            @include b.tab {
+                padding-left: 20px;
+
+            }
+
+            .text-ita {
+                font-size: 50px;
+                font-family: "Island Moments";
+
+                @include b.tab {
+                    font-size: 40px;
+                }
+            }
+
+            .ja-up,
+            .ja-down {
+                margin-bottom: 30px;
+            }
+
+            .img-left {
+                position: absolute;
+                left: 111px;
+                top: 20%;
+
+                @include b.tab {
+                    display: none;
+                }
+
+                .mixcer {
+                    width: 400px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .img-right {
+                position: absolute;
+                right: 122px;
+                top: 7%;
+
+                @include b.tab {
+                    display: none;
+                }
+
+                .sweets {
+                    width: 400px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .img-bottom {
+            width: 50%;
+            margin: 90px auto;
+
+            @include b.tab {
+                max-width: 400px;
+                width: 100%;
+                margin: 0 auto;
+
+                .late {
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #menu {
+        margin-bottom: 400px;
+
+        @include b.tab {
+            margin-bottom: 200px;
+        }
+
+
+        .menu-contents {
+            margin: 7% auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include b.tab {
+                flex-direction: column;
+                align-items: baseline;
+                position: relative;
+            }
+
+            h3 {
+                padding: 30px 30px;
+                margin: 0 auto;
+            }
+
+            .img-right {
+
+                .cannor {
+                    width: 440px;
+
+                    @include b.tab {
+                        max-width: 400px;
+                        width: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .all-menu {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            @include b.tab {
+                display: block;
+            }
+
+            .img-left {
+
+                @include b.tab {
+                    display: none;
+                }
+
+                .Machine {
+                    width: 555px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .btn {
+                display: block;
+                text-align: right;
+                margin-top: 300px;
+
+                @include b.tab {
+                    margin-top: 200px;
+                    margin-right: 130px;
+                }
+
+                a {
+                    font-size: 60px;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 5px;
+                        width: 111%;
+                        height: 1px;
+                        background-color: #fff;
+                        transition: .5s;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: -15px;
+                        bottom: 2px;
+                        width: 14px;
+                        height: 10px;
+                        border-top: 1px solid #fff;
+                        // border-right: 1px solid #fff;
+                        transform: rotate(45deg);
+                        transition: .5s;
+                    }
+
+                    &:hover::before {
+                        width: 136%;
+                    }
+
+                    &:hover::after {
+                        right: -50px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #concept {
+        margin-bottom: 200px;
+
+        .concept-imgtop {
+            width: 60%;
+            margin: 90px auto;
+
+            @include b.tab {
+                margin: 0 0;
+                display: none;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .concept-contents {
+            padding: 30px 30px;
+            margin: 0 auto;
+            position: relative;
+
+            .ja-up,
+            .ja-down {
+                margin-block: 90px;
+
+                @include b.tab {
+                    margin-block: 40px;
+                }
+            }
+
+            .img-leftup {
+                position: absolute;
+                left: -15%;
+                top: 3%;
+
+                @include b.tab {
+                    top: 90%;
+                    left: 0;
+                }
+
+                .flour {
+                    width: 300px;
+
+                    @include b.tab {
+                        width: 135px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .img-leftdown {
+                position: absolute;
+                left: 30px;
+                top: 355px;
+
+                @include b.tab {
+                    top: 142%;
+                    left: 242px;
+                }
+
+                .beaten-egg {
+                    width: 200px;
+
+                    @include b.tab {
+                        width: 105px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .img-rightup {
+                position: absolute;
+                right: -13%;
+                top: 40%;
+
+                @include b.tab {
+                    display: none;
+                }
+
+                .chicken {
+                    width: 250px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .img-rightdown {
+                position: absolute;
+                right: 65px;
+                bottom: -24%;
+
+                @include b.tab {
+                    display: none;
+                }
+
+                .egg {
+                    width: 280px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .concept-imgbottom {
+            width: 40%;
+            margin: 90px auto;
+
+            @include b.tab {
+                width: 35%;
+                margin: 50px auto;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+    #access {
+        max-width: 100%;
+        padding-block: 120px 200px;
+        background-color: black;
+
+
+        .access-flex {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 50px;
+
+            @include b.tab {
+                flex-direction: column;
+                align-items: baseline;
+            }
+
+            .access-info {
+                p {
+                    font-size: 24px;
+                    font-family: "Yu Mincho";
+                    margin-bottom: 50px;
+                }
+            }
+
+            .access-map {
+                width: 50%;
+                filter: grayscale(1);
+
+                @include b.tab {
+                    width: 100%;
+                }
+
+                iframe {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    #contact {
+        max-width: 100%;
+        padding-block: 120px 200px;
+        background-color: #727070;
+        color: #fff;
+
+        @include b.tab {
+            padding: 80px 0;
+        }
+
+
+        .content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-family: "Yu Mincho";
+
+            .contact-form {
+                width: 80%;
+                margin-left: 100px;
+
+                @include b.tab {
+                    width: 100%;
+                    margin-left: auto;
+                }
+
+                label {
+                    font-size: 32px;
+
+                    @include b.tab {
+                        font-size: 24px;
+                    }
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    background-color: #fff;
+                }
+
+                .button {
+                    text-align: right;
+
+                    input {
+                        width: 200px;
+                        margin-bottom: 0;
+                        padding: 12px 0;
+                        font-size: 24px;
+                        color: #fff;
+                        background-color: #121212;
+                        border: 1px solid #fff;
+
+                        @include b.tab {
+                            width: 150px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Island Moments";
+
+    @include b.tab {
+        flex-direction: column
+    }
+
+    a {
+        font-size: 60px;
+        font-weight: lighter;
+    }
+
+    p {
+        font-size: 60px;
+        font-weight: lighter;
+    }
+
+    .menu-right {
+        width: 100%;
+        overflow-x: auto;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                padding-inline: 2%;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    font-size: 40px;
+
+                    @include b.tab {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            img {
+                &.insta-icon {
+                    width: 15px;
+                    margin-top: 5px;
+                    margin-inline: 5px;
+
+                }
+            }
+        }
+    }
+
+    #to-top {
+        width: 50px;
+        height: 50px;
+        background-color: #121212;
+        border: solid 1px #fff;
+        border-radius: 50%;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+
+        @include b.tab {
+            bottom: 58px;
+        }
+
+        &::after {
+            content: "";
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #fff;
+            position: relative;
+            left: 17px;
+            bottom: 49px;
+        }
+    }
+
+}
